@@ -512,8 +512,7 @@ h2 {
 }
 
 .details:hover {
-  background-color: #6195ca7b;
-  border: none;
+  background-color: #6195ca90;
 }
 
 .cart {
@@ -532,8 +531,7 @@ h2 {
 }
 
 .cart:hover {
-  background-color: #6195ca7b;
-  border: none;
+  background-color: #6195ca90;
 }
 
 .cart img {
