@@ -439,7 +439,7 @@ h2 {
   background-color: #2c71b8;
 }
 
-.device-name {
+.device-name h2 {
   height: 50px;
   width: 270px;
   font-family: "Roboto", sans-serif;
