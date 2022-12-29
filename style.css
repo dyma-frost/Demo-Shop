@@ -279,23 +279,128 @@ body {
 
 .slider {
   height: 400px;
-  border: 1px solid black;
+  border-bottom: 1px solid white;
   font-size: 150px;
 }
 
 /* MAIN */
 
-aside {
+
+
+                  /* ASIDE */
+
+
+.aside-bar {
   width: 270px;
+  min-height: 845px;
   background-color: #5f92c97b;
+  border-right: 1px solid white;
 }
 
-h2 {
+.aside-bar input[type="checkbox"]{
+  display: none;
+}
+
+.aside-bar input[type="checkbox"]:checked + label::before{
+  background-color: white;
+}
+
+label::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  height: 10px;
+  width: 10px;
+  border: 1px solid white;
+  position: absolute;
+  left: 30px;
+  top: 7px;
+}
+
+.aside-bar label {
+  position: relative;
+  padding-left: 52px;
+  color: white;
+  font-size: 21px;
+  font-weight: 300;
+  top: -8px;
+}
+
+
+.aside-bar h3 {
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 29px;
+  padding-bottom: 30px;
+}
+
+.aside-bar > div:first-child h3 {
+  padding-top: 30px;
+}
+
+.margin-top {
+  margin-top: 18px;
+}
+
+.aside-color, .aside-ram {
+  margin-top: 50px;
+}
+
+.aside-ram label {
+  text-transform: uppercase;
+}
+
+.main-name h2 {
   color: white;
   font-size: 48px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
+
+.aside-more-options {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside-more-options a {
+ text-decoration: none;
+ color: white;
+ font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  padding-top: 18px;
+  padding-bottom: 30px;
+  
+}
+
+.submit {
+  height: 50px;
+  width: 210px;
+  border: 1px solid white;
+  background-color: #2c71b8;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit:hover {
+  background-color: #6195ca90;
+}
+
+
+                /* MAIN */
+
+
 
 .way {
   color: white;
@@ -369,6 +474,9 @@ h2 {
   margin-right: -5px;
 }
 
+
+
+
 /* DEVICE ITEMS */
 
 .items-cards {
@@ -403,6 +511,8 @@ h2 {
   justify-content: center;
   align-items: center;
   position: relative;
+  border: 1px solid white;
+  border-top: none;
 }
 
 .full-screen-btn {
@@ -505,6 +615,7 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 21px;
+  text-transform: uppercase;
   margin-top: 15px;
   display: flex;
   align-items: center;
@@ -524,6 +635,7 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 21px;
+  text-transform: uppercase;
   margin-top: 15px;
   display: flex;
   align-items: center;
