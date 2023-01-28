@@ -57,8 +57,8 @@
                         </div>
                         <div class="col-3 basket-btn">
                             <button><img src="./demoShop/icon (1).png" alt="">
-                                <div class="number">
-                                    9
+                                <div class="number" id="products-count">
+                                    0
                                 </div>
                             </button>
                         </div>
@@ -68,7 +68,6 @@
         </div>
     </header>
     <main class="main">
-
         <div class="slider">SLIDER</div>
 
 
@@ -76,7 +75,6 @@
             <div class="row">
                 <div class="col-3">
                     <aside class="aside-bar">
-
                         <div class="aside-device-type">
                             <h3>Device Type</h3>
                             <div>
@@ -113,31 +111,31 @@
                             </div>
                         </div>
 
-                         <div class="aside-ram">
+                        <div class="aside-ram">
                             <h3>RAM</h3>
-                            
+
                             <div>
-                            <input type="checkbox" id="1gb">
-                            <label for="1gb">1GB</label>
+                                <input type="checkbox" id="1gb">
+                                <label for="1gb">1GB</label>
                             </div>
                             <div class="margin-top">
-                            <input type="checkbox" id="2gb">
-                            <label for="2gb">2gb</label>
+                                <input type="checkbox" id="2gb">
+                                <label for="2gb">2gb</label>
                             </div>
                             <div class="margin-top">
-                            <input type="checkbox" id="4gb">
-                            <label for="4gb">4gb</label>
+                                <input type="checkbox" id="4gb">
+                                <label for="4gb">4gb</label>
                             </div>
                             <div class="margin-top">
-                            <input type="checkbox" id="6gb">
-                            <label for="6gb">6gb</label>
+                                <input type="checkbox" id="6gb">
+                                <label for="6gb">6gb</label>
                             </div>
                             <div class="margin-top">
-                            <input type="checkbox" id="8gb">
-                            <label for="8gb">8gb</label>
+                                <input type="checkbox" id="8gb">
+                                <label for="8gb">8gb</label>
                             </div class="margin-top">
                         </div>
-                        <div  class="aside-more-options">
+                        <div class="aside-more-options">
                             <a href="">Show more options...</a>
                         </div>
 
@@ -168,7 +166,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (17).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-1" onclick="changeColor1()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#1 Device Name</h2>
@@ -194,7 +192,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (11).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-2" onclick="changeColor2()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#2 Device Name</h2>
@@ -219,7 +217,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (13).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-3" onclick="changeColor3()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#3 Device Name</h2>
@@ -244,7 +242,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (16).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-4" onclick="changeColor4()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#1 Device Name</h2>
@@ -269,7 +267,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (14).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-5" onclick="changeColor5()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#2 Device Name</h2>
@@ -294,7 +292,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (12).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-6" onclick="changeColor6()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#3 Device Name</h2>
@@ -319,7 +317,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (15).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-7" onclick="changeColor7()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#1 Device Name</h2>
@@ -344,7 +342,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (11).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-8" onclick="changeColor8()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#2 Device Name</h2>
@@ -369,7 +367,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (13).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <div class="favorite-btn"></div>
+                                <button class="favorite-btn" id="likebtn-9" onclick="changeColor9()"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#3 Device Name</h2>
@@ -390,22 +388,25 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col-9">
                 <div class="bottom-load-more">
-                    <a href=""><h4>Load more...</h4></a> 
-                </div>                
+                    <a href="">
+                        <h4>Load more...</h4>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
     <footer class="footer">
-        
-            <div class="footer-text">
-                © Copyright 2017
-            </div>
-    
-        </footer>
+
+        <div class="footer-text">
+            © Copyright 2017
+        </div>
+
+    </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>
