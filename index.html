@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
     <link rel="stylesheet" href="style.css">
     <title>HT9-shop</title>
 </head>
@@ -68,8 +72,19 @@
         </div>
     </header>
     <main class="main">
-        <div class="slider">SLIDER</div>
 
+        <div class="conteiner">
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider">
+                        <div><img src="./slider-arrow/imac.jpg" alt="imac image"></div>
+                        <div><img src="./slider-arrow/applewatch.png" alt="applewatch image"></div>
+                        <div><img src="./slider-arrow/mac-pro.jpeg" alt="mac-pro image"></div>
+                        <div><img src="./slider-arrow/macbook.jpeg" alt="macbook image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="conteiner">
             <div class="row">
@@ -166,7 +181,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (17).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-1" onclick="changeColor1()"></button>
+                                <button class="favorite-btn"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#1 Device Name</h2>
@@ -192,7 +207,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (11).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-2" onclick="changeColor2()"></button>
+                                <button class="favorite-btn" id="likebtn-2"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#2 Device Name</h2>
@@ -217,7 +232,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (13).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-3" onclick="changeColor3()"></button>
+                                <button class="favorite-btn"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#3 Device Name</h2>
@@ -242,7 +257,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (16).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-4" onclick="changeColor4()"></button>
+                                <button class="favorite-btn" id="likebtn-4"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#1 Device Name</h2>
@@ -267,7 +282,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (14).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-5" onclick="changeColor5()"></button>
+                                <button class="favorite-btn"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#2 Device Name</h2>
@@ -292,7 +307,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (12).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-6" onclick="changeColor6()"></button>
+                                <button class="favorite-btn"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#3 Device Name</h2>
@@ -317,7 +332,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (15).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-7" onclick="changeColor7()"></button>
+                                <button class="favorite-btn"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#1 Device Name</h2>
@@ -342,7 +357,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (11).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-8" onclick="changeColor8()"></button>
+                                <button class="favorite-btn"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#2 Device Name</h2>
@@ -367,7 +382,7 @@
                             <div class="device-image">
                                 <img src="./demoShop/icon (13).png" alt="">
                                 <div class="full-screen-btn"></div>
-                                <button class="favorite-btn" id="likebtn-9" onclick="changeColor9()"></button>
+                                <button class="favorite-btn"></button>
                             </div>
                             <div class="device-name">
                                 <h2>#3 Device Name</h2>
@@ -406,6 +421,31 @@
         </div>
 
     </footer>
+
+
+
+    <div class="modal">
+        <div class="modal-block">
+            <form action="">
+                <div class="btn-wrap">
+                    <div class="btn-close">X</div>
+                </div>
+                <h3>Please call for more datails</h3>
+                <div class="form-field">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-field">
+                    <input type="text" placeholder="Your phone">
+                </div>
+                <button class="submit-form">Send</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="app.js"></script>
 </body>
 
