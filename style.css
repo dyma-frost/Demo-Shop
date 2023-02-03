@@ -309,7 +309,7 @@ content: url(./slider-arrow/211689_left_arrow_icon.svg);
 }
 .slick-next:before{
   content: url(./slider-arrow/211607_right_arrow_icon.svg);
-  
+  margin-right: -255px;
 }
 .slick-dots li button{
   height: 120px;
@@ -327,6 +327,9 @@ content: url(./slider-arrow/211689_left_arrow_icon.svg);
   font-size: 32px;
   margin-top: -1px;
   margin-left: -1px;
+}
+.slick-next {
+  right: -46px;
 }
 
 
@@ -666,7 +669,7 @@ label::before {
   font-weight: 700;
   font-size: 21px;
   text-transform: uppercase;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -783,3 +786,10 @@ label::before {
 .hide {
   display: none;
 }
+
+.product-quantity{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+

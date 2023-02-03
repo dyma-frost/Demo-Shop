@@ -66,13 +66,11 @@ document.querySelector(".submit-form").addEventListener("click", function (e) {
     e.preventDefault(); // убирает стандартную функцию с объекта
 });
 
-
 //__________SLIDER
 
-$('.slider').slick({
+$(".slider").slick({
     dots: true,
 });
-
 
 //__________MODAL AUTO OPEN
 
@@ -83,18 +81,25 @@ $('.slider').slick({
 // console.log("половина " + docHalfHeight);
 // console.log("текущий скролл " + currentValue);
 
-document.addEventListener("scroll", function () {
-    if (window.pageYOffset > document.body.clientHeight / 2) {
+//_______________МОЙ ВАРИАНТ
+// document.addEventListener("scroll", function () {
+//     if (window.pageYOffset > document.body.clientHeight / 2) {
+//         openModal();
+//     }
+//     // console.log("текущий скролл " + window.pageYOffset);
+// });
+// ________________
+function showModalByScroll() {
+    if (window.scrollY >= document.body.scrollHeight / 2) {
         openModal();
+        window.removeEventListener("scroll", showModalByScroll); //удаление ф-ции после выполнения
     }
-    // console.log("текущий скролл " + window.pageYOffset);
-});
+}
+window.addEventListener("scroll", showModalByScroll);
+// _________________ ТАЙМЕРЫ
 
-
-
-
-
-
+// setTimeout(openModal, 3000);  //таймер для ф-ции
+// setInterval(openModal, 3000); //интервал срабатывания (каждые *** мс)
 
 // _________________________________________________мой вариант лайков
 
@@ -205,4 +210,113 @@ document.addEventListener("scroll", function () {
 
 //___________________________________________
 
+//___________ANIMATE ON SCROLL (АНИМАЦИЯ ПРИ СКРОЛЛЕ)
 
+/* AOS.init(); */
+
+// ____________ ф-ции конструкторы
+
+// function Car(model, color, year) {
+//     this.model = model;
+//     this.color = color;
+//     this.year = year;
+// }
+
+// class Car {     //новый вид ф-ции
+//     constructor(model, color, year) {
+//         this.model = model;
+//         this.color = color;
+//         this.year = year;
+//         // this.hi = function () {
+//         //     console.log("Hi " + this.model);
+//         // };
+//     }
+//     hi = function () {
+//             console.log("Hi " + this.model);
+//         };
+//     hello = function () {
+//             console.log("Hello " + this.model + " " + this.color);
+//         };
+// };
+
+// let audi = new Car("A4", "black", 2008);
+// let lexus = new Car("ES250", "white", 2008);
+// let bmw = new Car("328", "grey", 2020);
+
+// console.log(audi);
+// console.log(lexus);
+// console.log(bmw);
+
+// audi.hi();
+// lexus.hi();
+// bmw.hi();
+
+// audi.hello();
+// lexus.hello();
+// bmw.hello();
+
+//______________изменение кол-ва
+
+
+
+
+
+
+const incrementBtns = document.querySelectorAll(".increment-btn");
+const decrementBtns = document.querySelectorAll(".decrement-btn");
+const productsCount = document.querySelectorAll(".product-quantity input");
+
+let lengthIncrementBtns = incrementBtns.length;
+console.log(incrementBtns.length);
+
+
+
+// console.log(incrementBtns);
+// console.log(decrementBtns);
+// console.log(productsCount);
+
+function Counter(incrementBtn, decrementBtn, inputField) {
+    this.domRefs = {
+        incrementBtn,
+        decrementBtn,
+        inputField,
+    };
+    
+    this.toggleButtonState = function () {
+        const count = +this.domRefs.inputField.value;
+        this.domRefs.decrementBtn.disabled = count <= 1;
+        this.domRefs.incrementBtn.disabled = count >= 10;
+    };
+    this.toggleButtonState();
+    
+    this.increment = function () {
+        let count = +this.domRefs.inputField.value;
+        this.domRefs.inputField.value = count + 1;
+        this.toggleButtonState();
+    };
+    
+    this.decrement = function () {
+        let count = +this.domRefs.inputField.value;
+        this.domRefs.inputField.value = count - 1;
+        this.toggleButtonState();
+    };
+    
+    this.domRefs.incrementBtn.addEventListener(
+        "click",
+        this.increment.bind(this)
+        );
+        this.domRefs.decrementBtn.addEventListener(
+            "click",
+            this.decrement.bind(this)
+            );
+        }
+        
+        // const counter1 = new Counter(incrementBtns, decrementBtns, productsCount);
+        // console.log(counter1);
+        
+        
+        let counters = [];
+        productsCount.forEach(
+            (item, i) => (counters[i] = new Counter(incrementBtns[i], decrementBtns[i], item)));
+            
+        console.log(counters)
