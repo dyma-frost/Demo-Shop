@@ -295,24 +295,25 @@ body {
   margin: 30px auto;
 }
 .slick-prev{
-  left: -170px;
+  left: -100px;
 }
 
 .slick-next{
-  right: -185px;
+  right: -100px;
 }
 
 .slick-prev, .slick-next{
-  width: 364px;
-  height: 529px;
+  height: 400px;
+  width: 200px;
 }
 
 .slick-prev:before{
 content: url(./slider-arrow/211689_left_arrow_icon.svg);
+margin-left: 20px;
 }
 .slick-next:before{
   content: url(./slider-arrow/211607_right_arrow_icon.svg);
-  margin-right: -255px;
+  margin-left: -20px;
 }
 .slick-dots li button{
   height: 120px;
@@ -330,9 +331,6 @@ content: url(./slider-arrow/211689_left_arrow_icon.svg);
   font-size: 32px;
   margin-top: -1px;
   margin-left: -1px;
-}
-.slick-next {
-  right: -46px;
 }
 
 
